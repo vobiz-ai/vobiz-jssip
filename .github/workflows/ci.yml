@@ -59,6 +59,6 @@ jobs:
           '
       - name: No upstream vendor names or secrets in the published files
         run: |
-          if grep -n -i -E 'plivo|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY' dist/*.js index.d.ts README.md package.json; then
+          if grep -n -i -E 'pl[i]vo|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY' dist/*.js index.d.ts README.md package.json; then
             echo "found a forbidden string"; exit 1
           fi
